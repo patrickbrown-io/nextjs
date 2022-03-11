@@ -1,62 +1,82 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Link from "next/link";
+
+import Image from "next/image";
+
+const ProfilePicture = () => (
+  <Image
+    src="/images/headshot.jpg" // Route of the image file
+    height={400} // Desired size with correct aspect ratio
+    width={400} // Desired size with correct aspect ratio
+    alt="Pat Brown"
+  />
+);
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>NextJS</title>
+        <link rel="icon" href="/beer.svg" />
       </Head>
 
       <main>
+        <ProfilePicture />
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Read{" "}
+          <Link href="/posts/first-post">
+            <a>this page!</a>
+          </Link>
         </h1>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="https://nextjs.org/docs" target="_blank" className="card">
+            <h3>Card &rarr;</h3>
+            <p>I am a card!</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className="card">
+          <a href="https://nextjs.org/learn" target="_blank" className="card">
             <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur</p>
           </a>
 
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"
+            target="_blank"
             className="card"
           >
             <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <p>
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </p>
           </a>
 
           <a
             href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            target="_blank"
             className="card"
           >
             <h3>Deploy &rarr;</h3>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
             </p>
           </a>
         </div>
       </main>
 
       <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
+        Powered by
+        <img src="/beer.svg" alt="Beer" className="logo" />
       </footer>
 
       <style jsx>{`
@@ -103,7 +123,7 @@ export default function Home() {
         }
 
         .title a {
-          color: #0070f3;
+          color: #4aba5f;
           text-decoration: none;
         }
 
@@ -130,7 +150,7 @@ export default function Home() {
         }
 
         code {
-          background: #fafafa;
+          background: #4aba5f;
           border-radius: 5px;
           padding: 0.75rem;
           font-size: 1.1rem;
@@ -157,14 +177,14 @@ export default function Home() {
           text-decoration: none;
           border: 1px solid #eaeaea;
           border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
+          transition: color 0.2s ease, border-color 0.25s ease;
         }
 
         .card:hover,
         .card:focus,
         .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
+          color: #0d691e;
+          border-color: #4aba5f;
         }
 
         .card h3 {
@@ -205,5 +225,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
