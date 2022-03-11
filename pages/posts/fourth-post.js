@@ -2,11 +2,11 @@ import Link from "next/link";
 import Head from "next/head";
 import Layout from "../../components/layout";
 
-export default function FirstPost() {
+export default function FourthPost() {
   return (
     <Layout>
       <Head>
-        <title>First Post</title>
+        <title>Fourth Post</title>
       </Head>
 
       <h1>Lorem</h1>
@@ -18,4 +18,3 @@ export default function FirstPost() {
     </Layout>
   );
 }
-//hi

@@ -2,14 +2,14 @@ import Link from "next/link";
 import Head from "next/head";
 import Layout from "../../components/layout";
 
-export default function FirstPost() {
+export default function Me() {
   return (
     <Layout>
       <Head>
-        <title>First Post</title>
+        <title>Me</title>
       </Head>
 
-      <h1>Lorem</h1>
+      <h1>Me</h1>
       <h2>
         <Link href="/">
           <a className="hover-underline-animation">Back to home</a>
@@ -18,4 +18,3 @@ export default function FirstPost() {
     </Layout>
   );
 }
-//hi

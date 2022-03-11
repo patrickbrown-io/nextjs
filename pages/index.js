@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const ProfilePicture = () => (
   <Image
-    src="/images/headshot.jpg" // Route of the image file
+    src="/logo.svg" // Route of the image file
     height={400} // Desired size with correct aspect ratio
     width={400} // Desired size with correct aspect ratio
     alt="Pat Brown"
@@ -25,26 +25,22 @@ export default function Home() {
         <h1 className="title">
           Read{" "}
           <Link href="/posts/first-post">
-            <a>this page!</a>
+            <a className="hover-underline-animation">this page!</a>
           </Link>
         </h1>
 
         <div className="grid">
-          <a href="https://nextjs.org/docs" target="_blank" className="card">
+          <a href="/posts/second-post" className="card">
             <h3>Card &rarr;</h3>
             <p>I am a card!</p>
           </a>
 
-          <a href="https://nextjs.org/learn" target="_blank" className="card">
+          <a href="/posts/third-post" className="card">
             <h3>Learn &rarr;</h3>
             <p>"Lorem ipsum dolor sit amet, consectetur</p>
           </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            target="_blank"
-            className="card"
-          >
+          <a href="/posts/fourth-post" className="card">
             <h3>Examples &rarr;</h3>
             <p>
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -56,11 +52,7 @@ export default function Home() {
             </p>
           </a>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            className="card"
-          >
+          <a href="/bonus/me" className="card">
             <h3>Deploy &rarr;</h3>
             <p>
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -75,11 +67,11 @@ export default function Home() {
       </main>
 
       <footer>
-        Powered by
+        <p>Powered by</p>
         <img src="/beer.svg" alt="Beer" className="logo" />
       </footer>
 
-      <style jsx>{`
+      {/* <style jsx>{`
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
@@ -223,7 +215,7 @@ export default function Home() {
         * {
           box-sizing: border-box;
         }
-      `}</style>
+      `}</style> */}
     </div>
   );
 }
